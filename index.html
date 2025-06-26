@@ -1,0 +1,87 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FITZONE | Your Fitness Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">FITZONE</div>
+      <ul>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#log">Log Workout</a></li>
+        <li><a href="#chart">Progress</a></li>
+        <li><a href="#tip">Tips</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1><span class="highlight">FITZONE</span> - Your Smart Fitness Companion</h1>
+      <p>Track. Improve. Achieve.</p>
+      <a href="#log" class="cta-button">Start Logging Workouts</a>
+    </div>
+  </header>
+
+  <section id="stats" class="stats">
+    <h2>🔥 Daily Summary</h2>
+    <div class="card">
+      <p><strong>Calories Burned:</strong> <span id="calories">0</span> kcal</p>
+      <p><strong>Total Workout Time:</strong> <span id="time">0</span> mins</p>
+    </div>
+  </section>
+
+  <section id="chart">
+    <h2>📈 Weekly Progress</h2>
+    <canvas id="progressChart" width="400" height="200"></canvas>
+  </section>
+
+  <section id="log">
+    <h2>📝 Workout Log</h2>
+    <div class="log-form">
+      <select id="exercise">
+        <option value="" disabled selected>Select Exercise</option>
+        <option value="Running">Running</option>
+        <option value="Cycling">Cycling</option>
+        <option value="Swimming">Swimming</option>
+        <option value="Walking">Walking</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Strength Training">Strength Training</option>
+        <option value="HIIT">HIIT</option>
+        <option value="Jump Rope">Jump Rope</option>
+        <option value="Dancing">Dancing</option>
+        <option value="Pilates">Pilates</option>
+        <option value="Boxing">Boxing</option>
+      </select>
+      <input type="number" id="duration" placeholder="Duration (min)" />
+      <button onclick="addWorkout()">Add</button>
+    </div>
+    <ul id="logList"></ul>
+  </section>
+
+  <section id="tip">
+    <h2>💡 Tip of the Day</h2>
+    <p id="tipText">Loading motivational tip...</p>
+  </section>
+
+  <section id="why">
+    <h2>💪 Why Use FITZONE?</h2>
+    <ul>
+      <li>✅ Easy-to-use workout logging</li>
+      <li>✅ Smart calorie calculator</li>
+      <li>✅ Motivational tips daily</li>
+      <li>✅ Beautiful progress charts</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 FITZONE. All rights reserved.</p>
+    <p class="footer-quote">"Discipline turns intentions into actions."</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

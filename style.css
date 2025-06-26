@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 40px;
+  background-color: #121212;
+  border-bottom: 2px solid #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav .logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2ecc71;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2ecc71;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #2ecc71;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+header {
+  background: url('https://images.unsplash.com/photo-1571019613578-2b4d1d225f54') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #2ecc71;
+  color: #0e0e0e;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #27ae60;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+  width: 100%;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  border-left: 5px solid #2ecc71;
+  padding-left: 15px;
+}
+
+.stats .card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.15);
+}
+
+canvas {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.log-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.log-form select,
+.log-form input,
+.log-form button {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  flex: 1 1 100%;
+  min-width: 100px;
+}
+
+.log-form button {
+  background: #2ecc71;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.log-form button:hover {
+  background: #27ae60;
+}
+
+#logList {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#logList li {
+  background: #1e1e1e;
+  border-left: 4px solid #2ecc71;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+#tipText {
+  background: #1e1e1e;
+  padding: 20px;
+  border-left: 5px solid #2ecc71;
+  font-style: italic;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #121212;
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #2ecc71;
+}
+
+.footer-quote {
+  font-style: italic;
+  font-size: 13px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  section h2 {
+    font-size: 22px;
+  }
+
+  .log-form {
+    flex-direction: column;
+  }
+
+  .log-form input,
+  .log-form select,
+  .log-form button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  canvas {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .cta-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  nav ul li a {
+    font-size: 13px;
+  }
+}
